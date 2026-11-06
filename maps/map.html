@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_0c94be602f57d7815e1b751ca18bf878 {
+                #map_8b4266bf2c18222b32de26783b5118eb {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -54,14 +54,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_0c94be602f57d7815e1b751ca18bf878" ></div>
+            <div class="folium-map" id="map_8b4266bf2c18222b32de26783b5118eb" ></div>
         
 </body>
 <script>
     
     
-            var map_0c94be602f57d7815e1b751ca18bf878 = L.map(
-                "map_0c94be602f57d7815e1b751ca18bf878",
+            var map_8b4266bf2c18222b32de26783b5118eb = L.map(
+                "map_8b4266bf2c18222b32de26783b5118eb",
                 {
                     center: [64.5, 11.0],
                     crs: L.CRS.EPSG3857,
@@ -78,7 +78,7 @@
 
         
     
-            var tile_layer_58cd9381935dd043163ccde2a44b3458 = L.tileLayer(
+            var tile_layer_21b123b5fe32323cc622d1ac6d2e5c60 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -95,7 +95,31 @@
             );
         
     
-            tile_layer_58cd9381935dd043163ccde2a44b3458.addTo(map_0c94be602f57d7815e1b751ca18bf878);
+            tile_layer_21b123b5fe32323cc622d1ac6d2e5c60.addTo(map_8b4266bf2c18222b32de26783b5118eb);
         
+    
+            var marker_f2a413c57153c13a0300aca4493ba770 = L.marker(
+                [63.4305, 10.3951],
+                {
+}
+            ).addTo(map_8b4266bf2c18222b32de26783b5118eb);
+        
+    
+        var popup_f0107c6718c4d514b2a171d3daabd425 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c40e1dc7f987ea0a451ac4dedd9e7c49 = $(`<div id="html_c40e1dc7f987ea0a451ac4dedd9e7c49" style="width: 100.0%; height: 100.0%;">Trondheim</div>`)[0];
+                popup_f0107c6718c4d514b2a171d3daabd425.setContent(html_c40e1dc7f987ea0a451ac4dedd9e7c49);
+            
+        
+
+        marker_f2a413c57153c13a0300aca4493ba770.bindPopup(popup_f0107c6718c4d514b2a171d3daabd425)
+        ;
+
+        
+    
 </script>
 </html>
