@@ -7,3 +7,8 @@ and programming.
 - Create interactive maps
 - Explore land-use patterns and trends
 - Develop GIS and programming skills
+
+
+##First milestone
+
+Create an interactive map showing geographic data and trends
