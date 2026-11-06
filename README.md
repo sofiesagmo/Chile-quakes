@@ -1,2 +1,9 @@
-# land-trend
-A geography and programming project focused on maps and spatial data
+# Land-trend
+A project exploring land use, spatial data, and geographic trends through GIS
+and programming.
+
+## Goals 
+- Analyze spatial datasets
+- Create interactive maps
+- Explore land-use patterns and trends
+- Develop GIS and programming skills
