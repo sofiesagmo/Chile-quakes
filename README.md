@@ -9,6 +9,6 @@ and programming.
 - Develop GIS and programming skills
 
 
-##First milestone
+## First milestone
 
 Create an interactive map showing geographic data and trends
