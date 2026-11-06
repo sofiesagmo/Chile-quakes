@@ -1,10 +1,12 @@
 import folium
 
+# Map centered over Norway
 m = folium.Map(
-    location=[63.43, 10.39],
+    location=[64.5, 11],
     zoom_start=5
 )
 
-m.save("maps/norway_map.html")
+# Lagre kartet
+m.save("maps/map.html")
 
-print("Map created!")
+print("Kart lagret i maps/map.html")
