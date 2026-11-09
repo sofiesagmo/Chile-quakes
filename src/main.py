@@ -1,4 +1,4 @@
-"""Lager et Folium-kart over jordskjelv i Chile med Valparaíso markert."""
+"""Makes a Folium-map over earthquakes in Chile with Valparaíso marked."""
 
 from pathlib import Path
 
@@ -39,7 +39,7 @@ def depth_color(depth_km: float) -> str:
 def main() -> None:
     df = pd.read_csv(DATA_FILE, parse_dates=["time"])
 
-    # Skjelv nær Valparaíso siste år
+    # Earthquakes close to Valparaíso last years
     df["dist_valpo_km"] = haversine_km(
         VALPARAISO[0], VALPARAISO[1], df["latitude"], df["longitude"]
     )

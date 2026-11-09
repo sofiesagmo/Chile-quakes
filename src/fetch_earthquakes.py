@@ -1,4 +1,4 @@
-"""Henter jordskjelv i Chile fra USGS og lagrer dem til data/earthquakes_chile.csv."""
+"""Fetches earthquakes in Chile from USGS and saves them to data/earthquakes_chile.csv."""
 
 from datetime import date
 from io import StringIO
@@ -9,7 +9,7 @@ import requests
 
 URL = "https://earthquake.usgs.gov/fdsnws/event/1/query"
 
-# Grov bounding box rundt Chile
+# Rough bounding box around Chile
 MIN_LAT, MAX_LAT = -56, -17
 MIN_LON, MAX_LON = -76, -66
 
