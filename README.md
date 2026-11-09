@@ -1,72 +1,42 @@
-# Land-trend
-A project exploring land use, spatial data, and geographic trends through GIS
-and programming.
+# Earthquakes in Chile
 
-## Goals 
-- Analyze spatial datasets
-- Create interactive maps
-- Explore land-use patterns and trends
-- Develop GIS and programming skills
+A small project combining computer science and geoscience. It uses open USGS data to explore earthquakes in Chile, where the Nazca plate is pushed under South America, and shows them on an interactive map with Valparaíso marked.
 
-## Current Progress
+## Project history
 
-- Interactive map created with Folium
-- Location data loaded from CSV files
-- Project managed with Git and GitHub
-- Markers displayed for Norwegian cities
+This project started as "Land-Trend", a plan to measure vegetation change around Trondheim with Sentinel-2 satellite images and Google Earth Engine. While I was working on it during my exchange in Chile, a small earthquake suddenly hit, and it made me want to switch topics. The new topic needs no accounts or large raster files, so I can focus on the analysis.
 
-## First milestone
+## What it does
 
-Create an interactive map showing geographic data and trends
+- Fetches earthquakes (M4+, last 5 years) from the USGS API
+- Shows them on a Folium map: size by magnitude, color by depth
+- Marks Valparaíso and counts earthquakes within 100 km in the last year
 
-## Project Structure
+## Planned
 
-```text
-land-trend/
-├── data/
-│   └── places.csv
-├── docs/
-├── maps/
-│   └── map.html
-├── src/
-│   └── main.py
-├── .gitignore
-└── README.md
-```
+1. Cross-section of the subduction zone (depth vs longitude)
+2. Gutenberg-Richter law and b-value
+3. Time series and aftershocks
+4. Comparison with Norway
 
-## Technologies
+## Structure
 
-- Python
-- Folium
-- CSV
-- Git
-- GitHub
+    data/   Downloaded data (CSV)
+    docs/   Notes and figures
+    maps/   Generated maps (HTML)
+    src/    Python scripts
 
-## Running the Project
+## Getting started
 
-Activate the virtual environment:
+    python -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
 
-```bash
-source .venv/bin/activate
-```
+    python src/fetch_earthquakes.py
+    python src/main.py
 
-Run the application:
+Open maps/map.html in a browser.
 
-```bash
-python src/main.py
-```
+## Data
 
-Open the generated map:
-
-```bash
-open maps/map.html
-```
-
-## Future Ideas
-
-- GeoJSON support
-- Land-use analysis
-- Environmental datasets
-- Climate and population data layers
-- Interactive map filters
-- Time-series visualization of geographic changes
+USGS Earthquake Catalog: https://earthquake.usgs.gov/fdsnws/event/1/
