@@ -12,12 +12,20 @@ with open("data/places.csv", newline="") as file:
     reader = csv.DictReader(file)
 
     for row in reader:
-        folium.Marker(
+        folium.CircleMarker(
             location=[float(row["lat"]), float(row["lon"])],
-            popup=row["name"]
+            radius=8,
+            color="blue",
+            fill=True,
+            fill_color="blue",
+            popup=f"""
+            <b>{row['name']}</b><br>
+            Population: {row['population']}
+            Region: {row['region']}
+            """
         ).add_to(m)
 
 # Save the map
 m.save("maps/map.html")
 
-print("Kart lagret i maps/map.html")
+print("Map saved in maps/map.html")

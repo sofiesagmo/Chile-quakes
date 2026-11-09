@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_e770fb87e47bc0bdf8b4aa17c5d423ed {
+                #map_b9006335e10a4036539f2d06ddc10e6c {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -54,14 +54,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_e770fb87e47bc0bdf8b4aa17c5d423ed" ></div>
+            <div class="folium-map" id="map_b9006335e10a4036539f2d06ddc10e6c" ></div>
         
 </body>
 <script>
     
     
-            var map_e770fb87e47bc0bdf8b4aa17c5d423ed = L.map(
-                "map_e770fb87e47bc0bdf8b4aa17c5d423ed",
+            var map_b9006335e10a4036539f2d06ddc10e6c = L.map(
+                "map_b9006335e10a4036539f2d06ddc10e6c",
                 {
                     center: [64.5, 11.0],
                     crs: L.CRS.EPSG3857,
@@ -78,7 +78,7 @@
 
         
     
-            var tile_layer_096968c61c06eecd71dc97fa4a543977 = L.tileLayer(
+            var tile_layer_97bd7af2082ad51fc99613a92c3c8510 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -95,124 +95,119 @@
             );
         
     
-            tile_layer_096968c61c06eecd71dc97fa4a543977.addTo(map_e770fb87e47bc0bdf8b4aa17c5d423ed);
+            tile_layer_97bd7af2082ad51fc99613a92c3c8510.addTo(map_b9006335e10a4036539f2d06ddc10e6c);
         
     
-            var marker_767c2b2d5610aaf2446480b511a644fb = L.marker(
+            var circle_marker_9d9aa0a2d0c63864fa393189776017b0 = L.circleMarker(
                 [58.97, 5.7331],
-                {
-}
-            ).addTo(map_e770fb87e47bc0bdf8b4aa17c5d423ed);
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b9006335e10a4036539f2d06ddc10e6c);
         
     
-        var popup_eee4c12c6afddc56b865ebe7d8ae1006 = L.popup({
+        var popup_96d8b06fee3b048fa26b9c1165257671 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_cd2f685c7f1c6d9974553b8d2de0575c = $(`<div id="html_cd2f685c7f1c6d9974553b8d2de0575c" style="width: 100.0%; height: 100.0%;">Stavanger</div>`)[0];
-                popup_eee4c12c6afddc56b865ebe7d8ae1006.setContent(html_cd2f685c7f1c6d9974553b8d2de0575c);
+                var html_5f288de6428a080c8a9956892b384c79 = $(`<div id="html_5f288de6428a080c8a9956892b384c79" style="width: 100.0%; height: 100.0%;">             <b>Stavanger</b><br>             Population: 149048             Region: Rogaland             </div>`)[0];
+                popup_96d8b06fee3b048fa26b9c1165257671.setContent(html_5f288de6428a080c8a9956892b384c79);
             
         
 
-        marker_767c2b2d5610aaf2446480b511a644fb.bindPopup(popup_eee4c12c6afddc56b865ebe7d8ae1006)
+        circle_marker_9d9aa0a2d0c63864fa393189776017b0.bindPopup(popup_96d8b06fee3b048fa26b9c1165257671)
         ;
 
         
     
     
-            var marker_fe896fd2800fb4709c830103a48b8e6f = L.marker(
+            var circle_marker_acc27b13c572efba6103bdf38b18eb56 = L.circleMarker(
                 [59.9139, 10.7522],
-                {
-}
-            ).addTo(map_e770fb87e47bc0bdf8b4aa17c5d423ed);
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b9006335e10a4036539f2d06ddc10e6c);
         
     
-        var popup_e9ffe492a70e49578da9c88221e90dec = L.popup({
+        var popup_5dc7e2e18ff7897201dcbdc9ef4688dc = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_780e0456c96e82a6d46f5675dccbcbdb = $(`<div id="html_780e0456c96e82a6d46f5675dccbcbdb" style="width: 100.0%; height: 100.0%;">Oslo</div>`)[0];
-                popup_e9ffe492a70e49578da9c88221e90dec.setContent(html_780e0456c96e82a6d46f5675dccbcbdb);
+                var html_3f959a15c12819cbcb6d9978798eb1d4 = $(`<div id="html_3f959a15c12819cbcb6d9978798eb1d4" style="width: 100.0%; height: 100.0%;">             <b>Oslo</b><br>             Population: 717710             Region: Oslo             </div>`)[0];
+                popup_5dc7e2e18ff7897201dcbdc9ef4688dc.setContent(html_3f959a15c12819cbcb6d9978798eb1d4);
             
         
 
-        marker_fe896fd2800fb4709c830103a48b8e6f.bindPopup(popup_e9ffe492a70e49578da9c88221e90dec)
+        circle_marker_acc27b13c572efba6103bdf38b18eb56.bindPopup(popup_5dc7e2e18ff7897201dcbdc9ef4688dc)
         ;
 
         
     
     
-            var marker_979b4c8e1551cb01a668b441b03b1c32 = L.marker(
+            var circle_marker_f7c7f25eb1da5cde82c6d684bdd35a6e = L.circleMarker(
                 [60.3913, 5.3221],
-                {
-}
-            ).addTo(map_e770fb87e47bc0bdf8b4aa17c5d423ed);
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b9006335e10a4036539f2d06ddc10e6c);
         
     
-        var popup_23f31bbc571f1f3f5896efc0a0809a84 = L.popup({
+        var popup_391d60f76462bb7d8b24ff99271d2a6c = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_0be35c83eedfbc12838b5602f1f868ce = $(`<div id="html_0be35c83eedfbc12838b5602f1f868ce" style="width: 100.0%; height: 100.0%;">Bergen</div>`)[0];
-                popup_23f31bbc571f1f3f5896efc0a0809a84.setContent(html_0be35c83eedfbc12838b5602f1f868ce);
+                var html_650d9c63428174aeaced892a11144de2 = $(`<div id="html_650d9c63428174aeaced892a11144de2" style="width: 100.0%; height: 100.0%;">             <b>Bergen</b><br>             Population: 291940             Region: Vestland             </div>`)[0];
+                popup_391d60f76462bb7d8b24ff99271d2a6c.setContent(html_650d9c63428174aeaced892a11144de2);
             
         
 
-        marker_979b4c8e1551cb01a668b441b03b1c32.bindPopup(popup_23f31bbc571f1f3f5896efc0a0809a84)
+        circle_marker_f7c7f25eb1da5cde82c6d684bdd35a6e.bindPopup(popup_391d60f76462bb7d8b24ff99271d2a6c)
         ;
 
         
     
     
-            var marker_93b023c44e87f5efb0d3b7fe6f662619 = L.marker(
+            var circle_marker_6e28d118a1103ddb15fe6a03d7df213e = L.circleMarker(
                 [63.4305, 10.3951],
-                {
-}
-            ).addTo(map_e770fb87e47bc0bdf8b4aa17c5d423ed);
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b9006335e10a4036539f2d06ddc10e6c);
         
     
-        var popup_01fa29202dcfd59d7ca51f46473a3413 = L.popup({
+        var popup_998a05753496c13751d20900a5fa75f4 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_949940454e9fc40066ac9da1a7f42a90 = $(`<div id="html_949940454e9fc40066ac9da1a7f42a90" style="width: 100.0%; height: 100.0%;">Trondheim</div>`)[0];
-                popup_01fa29202dcfd59d7ca51f46473a3413.setContent(html_949940454e9fc40066ac9da1a7f42a90);
+                var html_8920b422b1e945966088c243ef2c6280 = $(`<div id="html_8920b422b1e945966088c243ef2c6280" style="width: 100.0%; height: 100.0%;">             <b>Trondheim</b><br>             Population: 214890             Region: Trondelag             </div>`)[0];
+                popup_998a05753496c13751d20900a5fa75f4.setContent(html_8920b422b1e945966088c243ef2c6280);
             
         
 
-        marker_93b023c44e87f5efb0d3b7fe6f662619.bindPopup(popup_01fa29202dcfd59d7ca51f46473a3413)
+        circle_marker_6e28d118a1103ddb15fe6a03d7df213e.bindPopup(popup_998a05753496c13751d20900a5fa75f4)
         ;
 
         
     
     
-            var marker_a1ee0e27f251624e95dbfa1afd7f2b48 = L.marker(
+            var circle_marker_f785bce533a0c9331b6aea7203f3fc20 = L.circleMarker(
                 [69.6492, 18.9553],
-                {
-}
-            ).addTo(map_e770fb87e47bc0bdf8b4aa17c5d423ed);
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b9006335e10a4036539f2d06ddc10e6c);
         
     
-        var popup_6dee9f4650007e4677936068fbcefc9b = L.popup({
+        var popup_ed215bc26b3298a837cb9b6e09924b65 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_94629c095f95a4cce450b4ff9933a039 = $(`<div id="html_94629c095f95a4cce450b4ff9933a039" style="width: 100.0%; height: 100.0%;">Tromso</div>`)[0];
-                popup_6dee9f4650007e4677936068fbcefc9b.setContent(html_94629c095f95a4cce450b4ff9933a039);
+                var html_102802b0646c7a9ec4fc0810d3662fed = $(`<div id="html_102802b0646c7a9ec4fc0810d3662fed" style="width: 100.0%; height: 100.0%;">             <b>Tromso</b><br>             Population: 78988             Region: Troms             </div>`)[0];
+                popup_ed215bc26b3298a837cb9b6e09924b65.setContent(html_102802b0646c7a9ec4fc0810d3662fed);
             
         
 
-        marker_a1ee0e27f251624e95dbfa1afd7f2b48.bindPopup(popup_6dee9f4650007e4677936068fbcefc9b)
+        circle_marker_f785bce533a0c9331b6aea7203f3fc20.bindPopup(popup_ed215bc26b3298a837cb9b6e09924b65)
         ;
 
         

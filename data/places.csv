@@ -1,6 +1,6 @@
-name,lat,lon
-Stavanger,58.9700,5.7331
-Oslo,59.9139,10.7522
-Bergen,60.3913,5.3221
-Trondheim,63.4305,10.3951
-Tromso,69.6492,18.9553
+name,lat,lon,population,region
+Stavanger,58.9700,5.7331,149048,Rogaland
+Oslo,59.9139,10.7522,717710,Oslo
+Bergen,60.3913,5.3221,291940,Vestland
+Trondheim,63.4305,10.3951,214890,Trondelag
+Tromso,69.6492,18.9553,78988,Troms
