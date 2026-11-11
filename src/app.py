@@ -12,7 +12,9 @@ st.set_page_config(page_title="Earthquakes in Chile", layout="wide")
 
 @st.cache_data
 def load_data() -> pd.DataFrame:
-    return pd.read_csv("data/earthquakes_chile.csv", parse_dates=["time"])
+    df = pd.read_csv("data/earthquakes_chile.csv", parse_dates=["time"])
+    df["time"] = df["time"].dt.tz_convert("America/Santiago")
+    return df
 
 
 def depth_color(depth_km: float) -> str:
@@ -75,8 +77,25 @@ depth_range = st.sidebar.slider(
     help="How far below the surface the earthquake starts.",
 )
 
+date_min = df["time"].dt.date.min()
+date_max = df["time"].dt.date.max()
+date_range = st.sidebar.date_input(
+    "Date (Chile time)",
+    (date_min, date_max),
+    min_value=date_min,
+    max_value=date_max,
+    help="Narrow this to a few days to find a specific earthquake.",
+)
+if len(date_range) != 2:
+    st.info("Pick an end date to apply the date filter.")
+    st.stop()
+start, end = date_range
+
 filtered = df[
-    df["mag"].between(*mag_range) & df["depth"].between(*depth_range)
+    df["mag"].between(*mag_range)
+    & df["depth"].between(*depth_range)
+    & (df["time"].dt.date >= start)
+    & (df["time"].dt.date <= end)
 ]
 
 st.metric("Earthquakes shown", f"{len(filtered)} of {len(df)}")
@@ -95,10 +114,17 @@ for row in filtered.itertuples():
         fill_opacity=0.5,
         popup=(
             f"<b>M{row.mag:.1f}</b><br>Depth: {row.depth:.0f} km<br>"
-            f"{row.time:%Y-%m-%d %H:%M} UTC<br>{row.place}"
+            f"{row.time:%Y-%m-%d %H:%M} Chile time<br>{row.place}"
         ),
     ).add_to(m)
 
 folium.Marker(VALPARAISO, tooltip="Valparaíso", icon=folium.Icon(color="black")).add_to(m)
 
 st_folium(m, height=650, use_container_width=True, returned_objects=[])
+
+st.subheader("Earthquakes in the selected period")
+st.caption("Sorted by magnitude. Times are in Chile time.")
+table = filtered.sort_values("mag", ascending=False)[
+    ["time", "mag", "depth", "place"]
+].rename(columns={"time": "Time", "mag": "Magnitude", "depth": "Depth (km)", "place": "Place"})
+st.dataframe(table, use_container_width=True, hide_index=True)
