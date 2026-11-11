@@ -49,6 +49,8 @@ def main() -> None:
         frames.append(fetch_year(year_start.isoformat(), year_end.isoformat()))
 
     df = pd.concat(frames, ignore_index=True).drop_duplicates(subset="id")
+    # The bounding box also covers Argentina, Peru and Bolivia: keep only Chile
+    df = df[df["place"].str.contains("Chile", na=False)]
     df = df[["time", "latitude", "longitude", "depth", "mag", "place", "id"]]
 
     OUT_FILE.parent.mkdir(exist_ok=True)
