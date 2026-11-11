@@ -17,7 +17,7 @@ mags = df["mag"].to_numpy()
 # Simple "maximum curvature" method: the most common magnitude bin.
 bins = np.arange(mags.min(), mags.max() + BIN, BIN)
 counts, edges = np.histogram(mags, bins=bins)
-mc = edges[np.argmax(counts)]
+mc = 4.7  # chosen from b_value_check.py: b stabilizes from here
 
 # b-value with the Aki-Utsu maximum likelihood estimate
 above = mags[mags >= mc]
